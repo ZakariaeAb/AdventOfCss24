@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    background: #000000;
+}
+
+button {
+    position: relative;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    outline: none;
+    border: 8px solid transparent;
+    border-radius: 100px;
+    padding: 25px 55px;
+    background:
+        linear-gradient(#000000, #000000) padding-box,
+        linear-gradient(to right, #F4BB44 5%, #E0367C 25%, #6762D2 75%, #6ED3FA 100%) border-box;
+}
