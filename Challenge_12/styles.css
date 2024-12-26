@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    max-width: 438px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+#testimonials-4 main {
+    max-width: 1200px;
+    flex-direction: row;
+    gap: 4rem;
+}
+
+#testimonials-1 section,
+#testimonials-2 section,
+#testimonials-3 section,
+#testimonials-4 section {
+    display: flex;
+    gap: 1rem;
+}
+
+#testimonials-3 section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+#testimonials-4 section {
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#testimonials-2 section:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+#testimonials-1 .testimonial,
+#testimonials-2 .testimonial,
+#testimonials-3 .testimonial,
+#testimonials-4 .testimonial {
+    position: relative;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    z-index: 10;
+}
+
+#testimonials-3 .testimonial {
+    padding: 0 3rem;
+}
+
+#testimonials-4 .testimonial {
+    padding-right: 3rem;
+}
+
+#testimonials-1 .testimonial::before,
+#testimonials-2 .testimonial::before,
+#testimonials-3 .testimonial::before,
+#testimonials-4 .testimonial::before {
+    content: "";
+    background-image: url("./images/open-quotes.svg");
+    background-repeat: no-repeat;
+    height: 45px;
+    width: 45px;
+    position: absolute;
+    top: -1.5rem;
+    left: -1.5rem;
+    z-index: -1;
+}
+
+#testimonials-3 .testimonial::before {
+    top: -1.5rem;
+    left: 2rem;
+}
+
+#testimonials-3 .testimonial::after {
+    content: "";
+    background-image: url("./images/close-quotes.svg");
+    background-repeat: no-repeat;
+    height: 45px;
+    width: 45px;
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1rem;
+    z-index: -1;
+}
+
+#testimonials-1 .cite,
+#testimonials-2 .cite,
+#testimonials-3 .cite,
+#testimonials-4 .cite {
+    margin-top: 0.5rem;
+    font-size: 14px;
+    font-style: italic;
+}
+
+#testimonials-1 .cite span,
+#testimonials-2 .cite span,
+#testimonials-3 .cite span,
+#testimonials-4 .cite span {
+    font-style: initial;
+    font-weight: bold;
+}
