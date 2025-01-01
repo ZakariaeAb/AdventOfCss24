@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #DAC5A6;
+    padding: 2rem;
+}
+
+.container {
+    position: relative;
+    width: 960px;
+    margin: 0 auto;
+}
+
+.container .card {
+    width: fit-content;
+    margin: 0 auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.container .card:nth-child(1) {
+    transform: rotate(-4.67deg);
+}
+
+.container .card:nth-child(2) {
+    transform: rotate(4.27deg) translateX(-50%);
+    position: absolute;
+    top: 0.5rem;
+    left: 50%;
+}
+
+.container .card:nth-child(3) {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
