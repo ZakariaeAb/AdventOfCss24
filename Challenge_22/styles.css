@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 1rem;
+    font-family: 'Arimo', sans-serif;
+}
+
+ol {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    list-style: none;
+    counter-reset: item;
+}
+
+ol > li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 2rem 1rem;
+    counter-increment: item;
+    border: 2px solid #D6D6D6;
+    border-left: none;
+    transition: border-color 0.2s ease;
+}
+
+ol > li:first-child {
+    border-left: 2px solid #D6D6D6;
+    border-radius: 12px 0 0 12px;
+}
+
+ol > li:last-child {
+    border-radius: 0 12px 12px 0;
+}
+
+ol > li:hover {
+    border: 3px solid #EF7B69;
+    margin: -2px;
+    z-index: 1;
+}
+
+ol > li::before {
+    content: counter(item);
+    position: relative;
+    background: #090D3D;
+    color: white;
+    height: 72px;
+    width: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+ol > li img {
+    position: relative;
+    width: 255px;
+    height: 231px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+ol > li::after {
+    content: "";
+    position: absolute;
+    height: 72px;
+    width: 72px;
+    background-image: url("./images/check--large.svg");
+    top: 7.5rem;
+    left: 1rem;
+    z-index: 10;
+}
+
+ol > li h1 {
+    min-height: 120px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: -1px;
+    margin-bottom: 1rem;
+}
+
+ol > li > a {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    padding: 19px 26px;
+    background: #EF7B69;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 12px;
+    text-align: center;
+    letter-spacing: -1px;
+    margin-bottom: 1rem;
+}
+
+ol > li p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    margin-top: 1rem;
+}
+
+ol > li p a {
+    color: #090D3D;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+ol > li h2 {
+    width: 100%;
+    font-size: 20px;
+    letter-spacing: -1px;
+    font-weight: 700;
+    text-align: left;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+ol > li ul {
+    width: 100%;
+    font-size: 16px;
+    line-height: 22px;
+    list-style: none;
+}
+
+ol > li ul li {
+    position: relative;
+    margin-left: 40px;
+    margin-bottom: 1rem;
+}
+
+.pros li:before,
+.cons li:before {
+    content: "";
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    top: 0;
+    left: -40px;
+    background-image: url(./images/check.svg);
+}
+
+.cons li:before {
+    background-image: url(./images/minus.svg);
+}
